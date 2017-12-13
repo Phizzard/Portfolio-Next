@@ -1,0 +1,22 @@
+{
+  "name": "application",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "next": "^4.2.1",
+    "react-dom": "^16.2.0",
+    "react": "^16.2.0",
+    "reactstrap": "^5.0.0-alpha.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "next -p 8000",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
