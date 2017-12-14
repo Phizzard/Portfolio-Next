@@ -6,8 +6,9 @@
   "dependencies": {
     "bootstrap": "^4.0.0-beta.2",
     "next": "^4.2.1",
-    "react-dom": "^16.2.0",
     "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-icons": "^2.2.7",
     "reactstrap": "^5.0.0-alpha.4"
   },
   "devDependencies": {},

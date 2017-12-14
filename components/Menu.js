@@ -1,32 +1,112 @@
-import Link from 'next/link';
-import { Row, Col } from 'reactstrap'
+import React, { Component } from 'react';
+import { Row } from 'reactstrap'
+import HomeIcon from 'react-icons/lib/md/account-box';
+import AboutIcon from 'react-icons/lib/md/info-outline';
+import PortfolioIcon from 'react-icons/lib/md/developer-board';
+import ContactsIcon from 'react-icons/lib/md/group';
+import FeedbackIcon from 'react-icons/lib/md/forum';
 
-export default (props) => (
-    <Row style={{height: props.height}}>
-        <Link href="/">
-            <Col style={{backgroundColor: '#1abc9c'}}>
-                Home
-            </Col>
-        </Link>
-        <Link href="/about">
-            <Col style={{backgroundColor: '#3498db'}}>
-                About
-            </Col>
-        </Link>
-        <Link href="/portfolio">
-            <Col style={{backgroundColor: '#9b59b6'}}>
-                Portfolio
-            </Col>
-        </Link>
-        <Link href="/contacts">
-            <Col style={{backgroundColor: '#e67e22'}}>
-                Contacts
-            </Col>
-        </Link>
-        <Link href="/feedback">
-            <Col style={{backgroundColor: '#e74c3c'}}>
-                Feedback
-            </Col>
-        </Link>
-    </Row>
-)
+import { LightenDarkenColor } from '../utils/colour';
+import Item from './Menu/Item';
+
+export default class Menu extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            home: {
+                background: '#1abc9c'
+            },
+            about: {
+                background: '#3498db'
+            },
+            portfolio: {
+                background: '#9b59b6'
+            },
+            contacts: {
+                background: '#e67e22'
+            },
+            feedback: {
+                background: '#e74c3c'
+            },
+        }
+        this.handleMouseOver = this.handleMouseOver.bind(this);
+        this.handleMouseOut = this.handleMouseOut.bind(this);
+    }
+    render(){
+        return(
+            <Row style={{height: this.props.height, textAlign: 'center', color: '#FFFFFF'}}>
+                <Item
+                    id="home"
+                    title="Home"
+                    path="/"
+                    icon={<HomeIcon style={{fontSize: '3rem'}}/>}
+                    background={this.state.home.background}
+                    cursor={this.state.home.cursor}
+                    mouseOver={this.handleMouseOver}
+                    mouseOut={this.handleMouseOut}
+                />
+                <Item
+                    id="about"
+                    title="About"
+                    path="/about"
+                    icon={<AboutIcon style={{fontSize: '3rem'}}/>}
+                    background={this.state.about.background}
+                    cursor={this.state.about.cursor}
+                    mouseOver={this.handleMouseOver}
+                    mouseOut={this.handleMouseOut}
+                />
+                <Item
+                    id="portfolio"
+                    title="Portfolio"
+                    path="/portfolio"
+                    icon={<PortfolioIcon style={{fontSize: '3rem'}}/>}
+                    background={this.state.portfolio.background}
+                    cursor={this.state.portfolio.cursor}
+                    mouseOver={this.handleMouseOver}
+                    mouseOut={this.handleMouseOut}
+                />
+                <Item
+                    id="contacts"
+                    title="Contacts"
+                    path="/contacts"
+                    icon={<ContactsIcon style={{fontSize: '3rem'}}/>}
+                    background={this.state.contacts.background}
+                    cursor={this.state.contacts.cursor}
+                    mouseOver={this.handleMouseOver}
+                    mouseOut={this.handleMouseOut}
+                />
+                <Item
+                    id="feedback"
+                    title="Feedback"
+                    path="/feedback"
+                    icon={<FeedbackIcon style={{fontSize: '3rem'}}/>}
+                    background={this.state.feedback.background}
+                    cursor={this.state.feedback.cursor}
+                    mouseOver={this.handleMouseOver}
+                    mouseOut={this.handleMouseOut}
+                />
+            </Row>
+        );
+    }
+    handleMouseOver(id){
+        if(this.state[id]){
+            this.setState({
+                [id] : {
+                    background: LightenDarkenColor(this.state[id].background, -10),
+                    cursor: 'pointer'
+                }
+            })
+        }
+
+    }
+    handleMouseOut(id){
+        if(this.state[id]){
+            this.setState({
+                [id] : {
+                    background: LightenDarkenColor(this.state[id].background, 10),
+                    cursor: 'default'
+                }
+            })
+        }
+    }
+}
