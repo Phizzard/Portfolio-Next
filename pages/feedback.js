@@ -3,7 +3,6 @@ import Header from '../components/Header.js';
 
 export default () =>(
     <Template>
-        <Header></Header>
         <h2>feedback</h2>
     </Template>
 )

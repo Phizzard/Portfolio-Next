@@ -36,6 +36,7 @@ export default class Menu extends Component{
         return(
             <Row style={{height: this.props.height, textAlign: 'center', color: '#FFFFFF'}}>
                 <Item
+                    key="home"
                     id="home"
                     title="Home"
                     path="/"
@@ -46,6 +47,7 @@ export default class Menu extends Component{
                     mouseOut={this.handleMouseOut}
                 />
                 <Item
+                    key="about"
                     id="about"
                     title="About"
                     path="/about"
@@ -56,6 +58,7 @@ export default class Menu extends Component{
                     mouseOut={this.handleMouseOut}
                 />
                 <Item
+                    key="portfolio"
                     id="portfolio"
                     title="Portfolio"
                     path="/portfolio"
@@ -66,6 +69,7 @@ export default class Menu extends Component{
                     mouseOut={this.handleMouseOut}
                 />
                 <Item
+                    key="contacts"
                     id="contacts"
                     title="Contacts"
                     path="/contacts"
@@ -76,6 +80,7 @@ export default class Menu extends Component{
                     mouseOut={this.handleMouseOut}
                 />
                 <Item
+                    key="feedback"
                     id="feedback"
                     title="Feedback"
                     path="/feedback"

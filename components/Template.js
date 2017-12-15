@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import { Container } from 'reactstrap';
+import Header from './Header.js';
+import Footer from './Footer.js';
 
 export default (props) =>(
     <div>
@@ -9,7 +11,9 @@ export default (props) =>(
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossOrigin="anonymous" />
         </Head>
         <Container fluid>
+            <Header />
             {props.children}
+            <Footer />
         </Container>
         <style global jsx>{`
             .container-fluid{

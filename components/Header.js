@@ -37,10 +37,10 @@ export default class Header extends Component{
                         min-height: ${headerHeight}px;
                     }
                 `}</style>
-                <Col sm="3">
+                <Col md="3">
                     <img className="w-100 header-headshot" />
                 </Col>
-                <Col sm="9">
+                <Col md="9">
                     <Row>
                         <Title
                             key="main-title"
