@@ -16,7 +16,11 @@ export default (props)=> (
         >
             <div>
                 {props.icon}
-                <h4>{props.title}</h4>
+                <h4 style={{
+                    fontFamily: '"Open Sans", sans-serif',
+                    fontWeight: 600,
+                    fontSize: '1.1rem'
+                }}>{props.title}</h4>
             </div>
         </Col>
     </Link>

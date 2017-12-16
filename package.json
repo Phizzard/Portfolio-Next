@@ -9,7 +9,9 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-icons": "^2.2.7",
-    "reactstrap": "^5.0.0-alpha.4"
+    "react-lorem-component": "^0.12.2",
+    "reactstrap": "^5.0.0-alpha.4",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {},
   "scripts": {
