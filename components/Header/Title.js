@@ -11,9 +11,9 @@ export default (props) =>(
         <div>
             {
                 props.h1 ? (
-                    <h1 style={{paddingLeft: '30px'}}>{props.text}</h1>
+                    <h1 style={{paddingLeft: '30px', textTransform:'capitalize'}}>{props.text}</h1>
                 ):(
-                    <h2 style={{paddingLeft: '30px'}}>{props.text}</h2>
+                    <h2 style={{paddingLeft: '30px', textTransform:'capitalize'}}>{props.text}</h2>
                 )
             }
         </div>

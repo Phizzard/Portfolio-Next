@@ -1,9 +1,9 @@
 import SectionTitle from '../SectionTitle';
 import Lorem from 'react-lorem-component'
-export default ()=>(
+export default (props)=>(
     <div className="page-block short-bio">
-        <SectionTitle>A Web Developer Trying to Not piss off the internet</SectionTitle>
-        <h4>Get To know me</h4>
-        <Lorem count="2" />
+        <SectionTitle>{props.title}</SectionTitle>
+        <h4>{props.subTitle}</h4>
+        <p>{props.content}</p>
     </div>
 )
