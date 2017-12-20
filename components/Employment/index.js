@@ -6,7 +6,7 @@ export default (props) => (
         <SectionTitle>Employment</SectionTitle>
         {
             Object.entries(props.employment).reverse().map(([key, item])=>{
-                return <Item date={item.date} title={item.title} position={item.position} />
+                return <Item key={key} date={item.date} title={item.title} position={item.position} />
             })
         }
     </div>

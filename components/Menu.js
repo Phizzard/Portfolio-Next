@@ -69,17 +69,6 @@ export default class Menu extends Component{
                     mouseOut={this.handleMouseOut}
                 />
                 <Item
-                    key="contacts"
-                    id="contacts"
-                    title="Contacts"
-                    path="/contacts"
-                    icon={<ContactsIcon style={{fontSize: '3rem'}}/>}
-                    background={this.state.contacts.background}
-                    cursor={this.state.contacts.cursor}
-                    mouseOver={this.handleMouseOver}
-                    mouseOut={this.handleMouseOut}
-                />
-                <Item
                     key="feedback"
                     id="feedback"
                     title="Feedback"
