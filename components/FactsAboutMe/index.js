@@ -9,11 +9,13 @@ export default (props) => (
             <Col md="6">
                 <List items={{
                     status: props.items.status,
-                    educationLevel: props.items['education-level']
+                    educationLevel: props.items['education-level'],
+                    specialty: props.items.specialty
                 }} />
             </Col>
             <Col md="6">
                 <List items={{
+                    languages: props.items.languages,
                     position: props.items.position,
                     hobbies: props.items.hobbies
                 }} />
