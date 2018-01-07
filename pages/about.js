@@ -11,10 +11,16 @@ import Lorem from 'react-lorem-component';
 
 export default class About extends Component{
     static async getInitialProps({ req }) {
-        const res = await fetch('https://philip-tietjen.firebaseio.com/content/facts.json')
-        const facts = await res.json()
+        const res = await Promise.all([
+            fetch('https://philip-tietjen.firebaseio.com/content/facts.json'),
+            fetch('https://philip-tietjen.firebaseio.com/content/technology.json')
+        ]);
+        const   facts = await res[0].json(),
+                technologies = await res[1].json();
+
         return {
-            facts: facts.items
+            facts: facts.items,
+            technologies: technologies.items
         }
     }
     render(){
@@ -39,7 +45,7 @@ export default class About extends Component{
                 </Row>
                 <Row>
                     <Col style={{backgroundColor:"#f7f7f7"}}>
-                        <Technologies />
+                        <Technologies items={this.props.technologies} />
                     </Col>
                 </Row>
             </Template>
