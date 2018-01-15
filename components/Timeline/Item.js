@@ -1,7 +1,7 @@
 import {Row, Col, Card, CardBody, CardImg, CardTitle, CardSubtitle, CardText } from 'reactstrap';
 
 export default (props) => (
-    <Card>
+    <Card style={{marginTop: '1rem', border: 'none'}}>
         <Row>
             <Col md="2">
                 <CardImg src={`/static/${props.id}.png`} />
