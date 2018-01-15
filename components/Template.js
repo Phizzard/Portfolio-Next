@@ -39,6 +39,9 @@ export default (props) =>(
           .page-block {
               padding: 50px;
           }
+          .card-columns {
+              column-count: 6;
+            }
         `}</style>
     </div>
 )
